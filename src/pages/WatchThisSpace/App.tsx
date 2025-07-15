@@ -4,12 +4,15 @@ import AnimatedText from '../../components/AnimatedText';
 import AutoOrbiter from '../../components/AutoOrbiter';
 import OBJViewer from '../../components/OBJViewer';
 
+import BioCamera from '../../assets/Bio_Camera.obj?url';
+import BioCameraMtl from '../../assets/Bio_Camera.mtl?url';
+
 function App() {
   return (
     <div className="app">
       <Canvas className="background">
         <AutoOrbiter>
-          <OBJViewer assetPath="/src/assets/Bio_Camera.obj" />
+          <OBJViewer assetPath={BioCamera} materialsPath={BioCameraMtl} />
         </AutoOrbiter>
 
         <ambientLight intensity={2.5} />

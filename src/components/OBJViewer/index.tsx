@@ -3,13 +3,18 @@ import { MTLLoader, OBJLoader } from 'three/examples/jsm/Addons.js';
 
 interface OBJViewerProps {
   assetPath: string;
+  materialsPath?: string;
 }
 
-function OBJViewer({ assetPath }: OBJViewerProps) {
-  const materials = useLoader(MTLLoader, assetPath.replace('.obj', '.mtl'));
+function OBJViewer({ assetPath, materialsPath }: OBJViewerProps) {
+  const materials = useLoader(MTLLoader, materialsPath || '', () => {
+    if (!materialsPath) return null;
+  });
   const obj = useLoader(OBJLoader, assetPath, (loader) => {
-    materials.preload();
-    loader.setMaterials(materials);
+    if (materials && materialsPath) {
+      materials.preload();
+      loader.setMaterials(materials);
+    }
   });
 
   return <primitive object={obj} scale={0.4} />;
