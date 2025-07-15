@@ -1,5 +1,4 @@
 import { LoopType, Motion } from 'motion-frame';
-import './App.scss';
 import { useEffect, useRef } from 'react';
 
 const lerp = (
@@ -12,8 +11,11 @@ const lerp = (
   return ((value - sourceMin) * (targetMax - targetMin)) / (sourceMax - sourceMin) + targetMin;
 };
 
-function App() {
-  const text = 'Watch this space...';
+interface AnimatedTextProps {
+  text: string;
+}
+
+function AnimatedText({ text }: AnimatedTextProps) {
   const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const animationDuration = 10000;
   const motion = useRef<Motion>(
@@ -64,14 +66,13 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
+    <div>
       {text.split('').map((char, i) => (
         <span
-          key={i}
+          key={`${char}-${i}`}
           ref={(el) => {
             letterRefs.current[i] = el;
           }}
-          style={{ display: 'inline-block', fontVariationSettings: `"wght" 300` }}
         >
           {char === ' ' ? '\u00A0' : char}
         </span>
@@ -80,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default AnimatedText;
