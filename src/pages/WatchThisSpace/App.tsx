@@ -3,9 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import AnimatedText from '../../components/AnimatedText';
 import AutoOrbiter from '../../components/AutoOrbiter';
 import OBJViewer from '../../components/OBJViewer';
-
-import BioCamera from '../../assets/Bio_Camera.obj?url';
-import BioCameraMtl from '../../assets/Bio_Camera.mtl?url';
+import BioCamera from '../../assets/models/Bio_Camera.obj?url';
+import BioCameraMtl from '../../assets/models/Bio_Camera.mtl?url';
 
 function App() {
   return (
