@@ -3,10 +3,10 @@ import { MTLLoader, OBJLoader } from 'three/examples/jsm/Addons.js';
 
 interface OBJViewerProps {
   assetPath: string;
-  materialsPath?: string;
+  materialPath?: string | null;
 }
 
-function OBJViewer({ assetPath, materialsPath }: OBJViewerProps) {
+function OBJViewer({ assetPath, materialPath: materialsPath }: OBJViewerProps) {
   const materials = useLoader(MTLLoader, materialsPath || '', () => {
     if (!materialsPath) return null;
   });

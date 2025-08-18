@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import './index.scss';
 import App from './pages/WatchThisSpace/App.tsx';
-import ComponentList from './pages/componentList/ComponentList.tsx';
 import KindOfAsyncMarkdown from './components/KindOfAsyncMarkdown/index.tsx';
 
 const articles = import.meta.glob<string>('./assets/blogPosts/*.md', {
@@ -25,7 +24,6 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path="*" element={<div>404 Not Found</div>} />
         <Route path="/" element={<App />} />
-        <Route path="/componentList" element={<ComponentList />} />
         {routeNames.map((name, i) => (
           <Route
             key={name}

@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       <Canvas className="background">
         <AutoOrbiter>
-          <OBJViewer assetPath={BioCamera} materialsPath={BioCameraMtl} />
+          <OBJViewer assetPath={BioCamera} materialPath={BioCameraMtl} />
         </AutoOrbiter>
 
         <ambientLight intensity={2.5} />
