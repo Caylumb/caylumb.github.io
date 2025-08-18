@@ -5,7 +5,7 @@ import './index.scss';
 import App from './pages/WatchThisSpace/App.tsx';
 import KindOfAsyncMarkdown from './components/KindOfAsyncMarkdown/index.tsx';
 
-const articles = import.meta.glob<string>('./assets/blogPosts/*.md', {
+const articles = import.meta.glob<string>('./assets/blogPosts/**/*.md', {
   query: '?raw',
   import: 'default',
 });
