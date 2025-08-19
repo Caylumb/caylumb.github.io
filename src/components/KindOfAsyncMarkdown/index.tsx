@@ -3,6 +3,7 @@ import Markdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import KindOFAsyncModelLoader from '../KindOFAsyncModelLoader';
 import { customMarkdownSyntaxPlugin } from '../../customMarkdownSyntaxPlugin';
+import KindOfAsyncImageLoader from '../KindOfAsyncImageLoader';
 
 interface AsyncMarkdownProps {
   markdownFetcher: () => Promise<string>;
@@ -15,12 +16,23 @@ const components: Components = {
       node &&
       'properties' in node &&
       node.properties &&
-      typeof node.properties['data-three-d-viwer'] === 'string'
+      typeof node.properties['data-three-d-viewer'] === 'string'
     ) {
-      return <KindOFAsyncModelLoader modelName={node.properties['data-three-d-viwer']} />;
+      return <KindOFAsyncModelLoader modelName={node.properties['data-three-d-viewer']} />;
     }
     // Default div
     return <div {...props} />;
+  },
+  img: ({ src, alt }) => {
+    const fullFileNameSplit = src?.split('/').pop()?.split('.');
+    const fileName = fullFileNameSplit?.[0];
+    const fileType = fullFileNameSplit?.[1];
+
+    if (fileName && fileType && alt) {
+      return <KindOfAsyncImageLoader imageName={fileName} imageType={fileType} altText={alt} />;
+    } else {
+      throw new Error('Image source is not valid');
+    }
   },
 };
 

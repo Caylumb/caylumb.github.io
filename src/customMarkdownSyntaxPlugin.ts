@@ -53,7 +53,7 @@ export function customMarkdownSyntaxPlugin() {
                 type: 'element',
                 tagName: 'div',
                 properties: {
-                  'data-three-d-viwer': match[1],
+                  'data-three-d-viewer': match[1],
                 },
                 children: [],
               });
