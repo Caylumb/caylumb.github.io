@@ -34,6 +34,11 @@ const components: Components = {
       throw new Error('Image source is not valid');
     }
   },
+  a: ({ href, children }) => {
+    // remove .md from any href links
+    const cleanHref = href?.replace('.md', '');
+    return <a href={cleanHref}>{children}</a>;
+  },
 };
 
 function KindOfAsyncMarkdown({ markdownFetcher }: AsyncMarkdownProps) {
