@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import KindOFAsyncModelLoader from '../KindOFAsyncModelLoader';
 import { customMarkdownSyntaxPlugin } from '../../customMarkdownSyntaxPlugin';
 import KindOfAsyncImageLoader from '../KindOfAsyncImageLoader';
+import Layout from '../Layout';
 
 interface AsyncMarkdownProps {
   markdownFetcher: () => Promise<string>;
@@ -11,7 +12,6 @@ interface AsyncMarkdownProps {
 
 const components: Components = {
   div: ({ node, ...props }) => {
-    // Check for our custom attribute
     if (
       node &&
       'properties' in node &&
@@ -20,7 +20,6 @@ const components: Components = {
     ) {
       return <KindOFAsyncModelLoader modelName={node.properties['data-three-d-viewer']} />;
     }
-    // Default div
     return <div {...props} />;
   },
   img: ({ src, alt }) => {
@@ -35,7 +34,6 @@ const components: Components = {
     }
   },
   a: ({ href, children }) => {
-    // remove .md from any href links
     const cleanHref = href?.replace('.md', '');
     return <a href={cleanHref}>{children}</a>;
   },
@@ -45,7 +43,6 @@ function KindOfAsyncMarkdown({ markdownFetcher }: AsyncMarkdownProps) {
   const [text, setText] = useState('');
   const [error, setError] = useState(false);
 
-  // This is a bit of a hacky way to asynchronously load the markdown content
   useEffect(() => {
     markdownFetcher()
       .then((content) => {
@@ -57,18 +54,34 @@ function KindOfAsyncMarkdown({ markdownFetcher }: AsyncMarkdownProps) {
       });
   }, [markdownFetcher]);
 
-  if (text == '') {
-    return <div>Loading...</div>;
+  if (text === '') {
+    return (
+      <Layout>
+        <div className="markdown-content">
+          <p>Loading...</p>
+        </div>
+      </Layout>
+    );
   }
 
   if (error) {
-    return <div>Error loading content</div>;
+    return (
+      <Layout>
+        <div className="markdown-content">
+          <p>Error loading content</p>
+        </div>
+      </Layout>
+    );
   }
 
   return (
-    <Markdown rehypePlugins={[remarkGfm, customMarkdownSyntaxPlugin]} components={components}>
-      {text}
-    </Markdown>
+    <Layout>
+      <article className="markdown-content">
+        <Markdown rehypePlugins={[remarkGfm, customMarkdownSyntaxPlugin]} components={components}>
+          {text}
+        </Markdown>
+      </article>
+    </Layout>
   );
 }
 
