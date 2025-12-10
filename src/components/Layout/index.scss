@@ -1,0 +1,78 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &--with-nav {
+      padding-top: var(--nav-height);
+    }
+  }
+
+  &__container {
+    max-width: var(--content-max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--space-12) var(--container-padding);
+    position: relative;
+
+    // Vertical grid lines on each side
+    &::before,
+    &::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background-color: var(--color-border-light);
+      pointer-events: none;
+    }
+
+    &::before {
+      left: calc(50% - var(--content-max-width) / 2 - var(--container-padding));
+    }
+
+    &::after {
+      right: calc(50% - var(--content-max-width) / 2 - var(--container-padding));
+    }
+  }
+
+  // Landing variant - full viewport, no padding
+  &--landing {
+    .layout__main {
+      padding-top: 0;
+    }
+  }
+
+  // Full-width variant - uses wider container
+  &--full-width {
+    .layout__container {
+      max-width: var(--content-wide-max-width);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 960px) {
+  .layout {
+    &__container {
+      // Hide grid lines when container touches edges
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .layout {
+    &__container {
+      padding: var(--space-8) var(--space-4);
+    }
+  }
+}

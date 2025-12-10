@@ -1,9 +1,24 @@
 .orbiter {
   width: 400px;
   height: 400px;
-  margin: 2rem auto;
-  background: #111;
-  border-radius: 1rem;
+  margin: var(--space-8) auto;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
   position: relative;
   cursor: grab;
+  overflow: hidden;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+// Responsive sizing
+@media (max-width: 640px) {
+  .orbiter {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  }
 }
