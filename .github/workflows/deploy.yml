@@ -47,8 +47,9 @@ jobs:
           # Upload build output
           path: './dist'
 
-  # Deployment job
+  # Deployment job (only on push to main, not on PRs)
   deploy:
+    if: github.event_name == 'push'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
