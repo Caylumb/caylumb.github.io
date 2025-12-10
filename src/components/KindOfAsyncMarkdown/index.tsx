@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Markdown, { type Components } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import KindOFAsyncModelLoader from '../KindOFAsyncModelLoader';
 import { customMarkdownSyntaxPlugin } from '../../customMarkdownSyntaxPlugin';
 import KindOfAsyncImageLoader from '../KindOfAsyncImageLoader';
@@ -27,8 +28,8 @@ const components: Components = {
     const fileName = fullFileNameSplit?.[0];
     const fileType = fullFileNameSplit?.[1];
 
-    if (fileName && fileType && alt) {
-      return <KindOfAsyncImageLoader imageName={fileName} imageType={fileType} altText={alt} />;
+    if (fileName && fileType) {
+      return <KindOfAsyncImageLoader imageName={fileName} imageType={fileType} altText={alt ?? ''} />;
     } else {
       throw new Error('Image source is not valid');
     }
@@ -77,7 +78,7 @@ function KindOfAsyncMarkdown({ markdownFetcher }: AsyncMarkdownProps) {
   return (
     <Layout>
       <article className="markdown-content">
-        <Markdown rehypePlugins={[remarkGfm, customMarkdownSyntaxPlugin]} components={components}>
+        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, customMarkdownSyntaxPlugin]} components={components}>
           {text}
         </Markdown>
       </article>
