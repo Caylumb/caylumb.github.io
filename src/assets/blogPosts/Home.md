@@ -1,8 +1,7 @@
-# Hello there
+# Blogs
+<{:Bio_Camera:}>
 
-Welcome to my blog!
+## Want to go a tad bit deeper? Browse through some of the documented processes I went through while building or creating these projects.
 
-This is a cool <{:Bio_Camera:}>
-
-[take me to projects](./projects/list.md)
+# [**Project 1:** Biotracker](./projects/list.md)
 
