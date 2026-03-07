@@ -5,6 +5,8 @@ import rehypeRaw from 'rehype-raw';
 import KindOFAsyncModelLoader from '../KindOFAsyncModelLoader';
 import { customMarkdownSyntaxPlugin } from '../../customMarkdownSyntaxPlugin';
 import KindOfAsyncImageLoader from '../KindOfAsyncImageLoader';
+import KindOfAsyncPdfLoader from '../KindOfAsyncPdfLoader';
+import NewTabLink from '../NewTabLink';
 import Layout from '../Layout';
 
 interface AsyncMarkdownProps {
@@ -20,6 +22,23 @@ const components: Components = {
       typeof node.properties['data-three-d-viewer'] === 'string'
     ) {
       return <KindOFAsyncModelLoader modelName={node.properties['data-three-d-viewer']} />;
+    }
+    if (
+      node &&
+      'properties' in node &&
+      node.properties &&
+      typeof node.properties['data-pdf-viewer'] === 'string'
+    ) {
+      return <KindOfAsyncPdfLoader pdfPath={node.properties['data-pdf-viewer']} />;
+    }
+    if (
+      node &&
+      'properties' in node &&
+      node.properties &&
+      typeof node.properties['data-new-tab-link'] === 'string' &&
+      typeof node.properties['data-new-tab-label'] === 'string'
+    ) {
+      return <NewTabLink href={node.properties['data-new-tab-link']} label={node.properties['data-new-tab-label']} />;
     }
     return <div {...props} />;
   },

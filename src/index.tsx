@@ -2,7 +2,6 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import './index.scss';
-import App from './pages/WatchThisSpace/App.tsx';
 import KindOfAsyncMarkdown from './components/KindOfAsyncMarkdown/index.tsx';
 
 const articles = import.meta.glob<string>('./assets/blogPosts/**/*.md', {
@@ -23,14 +22,19 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path="*" element={<div>404 Not Found</div>} />
-        <Route path="/" element={<App />} />
-        {routeNames.map((name, i) => (
-          <Route
-            key={name}
-            path={`/${name.toLowerCase()}`}
-            element={<KindOfAsyncMarkdown markdownFetcher={articles[Object.keys(articles)[i]]} />}
-          />
-        ))}
+        {routeNames.map((name, i) => {
+          let routePath: string = '';
+          if (name !== 'index') {
+            routePath = name;
+          }
+          return (
+            <Route
+              key={routePath}
+              path={`/${routePath.toLowerCase()}`}
+              element={<KindOfAsyncMarkdown markdownFetcher={articles[Object.keys(articles)[i]]} />}
+            />
+          );
+        })}
       </Routes>
     </BrowserRouter>
   </StrictMode>,
