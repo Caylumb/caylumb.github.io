@@ -5,5 +5,5 @@
 
 # [**Project 1:** Biotracker](./projects/list.md)
 
-[](../../../images/sidebyside-1.jpg)
+![](../../../images/sidebyside-1.jpg)
 

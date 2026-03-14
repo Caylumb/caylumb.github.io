@@ -8,8 +8,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { path: '/', label: 'Home' },
-  { path: '/blog', label: 'Blog' },
   { path: '/projects/list', label: 'Projects' },
+  { path: '/about', label: 'About' },
 ];
 
 function Navigation() {
