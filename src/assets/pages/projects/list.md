@@ -1,16 +1,22 @@
 # List of projects
 
-![](../../images/sidebyside-1.png)
+## Biotracker from GTFO
 [Biotracker](./biotracker/gallery.md)
+![](../../images/sidebyside-1.png)
 
-## Game Jam 1
-<{pdf:projects/gamejams/Jam1:}>
-<{link:projects/gamejams/Jam1|Open PDF in new tab:}>
+---
 
-## Game Jam 2
-<{pdf:projects/gamejams/Jam2:}>
-<{link:projects/gamejams/Jam2|Open PDF in new tab:}>
+## Game Jam Aotearoa 2023 - Time Twister
+[Game Jam 1](./gamejams/gamejam1.md)
 
-## Game Jam 3
-<{pdf:projects/gamejams/Jam3:}>
-<{link:projects/gamejams/Jam3|Open PDF in new tab:}>
+---
+
+## Ludum Dare 54 - Spaced Out
+[Game Jam 2](./gamejams/gamejam2.md)
+
+---
+
+## ScoreSpace Jam #28- Super Cell
+[Game Jam 3](./gamejams/gamejam3.md)
+
+---
