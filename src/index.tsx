@@ -4,14 +4,14 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 import './index.scss';
 import KindOfAsyncMarkdown from './components/KindOfAsyncMarkdown/index.tsx';
 
-const articles = import.meta.glob<string>('./assets/blogPosts/**/*.md', {
+const articles = import.meta.glob<string>('./assets/pages/**/*.md', {
   query: '?raw',
   import: 'default',
 });
 
 const routeNames = Object.keys(articles).map((key) =>
   key
-    .replace('./assets/blogPosts/', '')
+    .replace('./assets/pages/', '')
     .replace('.md', '')
     .replace(/([A-Z])/g, ' $1')
     .trim(),
