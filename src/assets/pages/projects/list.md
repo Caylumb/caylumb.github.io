@@ -1,6 +1,6 @@
 # List of projects
 
-![](../../../images/sidebyside-1.jpg)
+![](../../images/sidebyside-1.jpg)
 [Biotracker](./biotracker/gallery.md)
 
 ## Game Jam 1
