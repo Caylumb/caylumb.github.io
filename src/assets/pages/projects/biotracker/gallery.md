@@ -1,4 +1,15 @@
-# Biotracker Gallery
+# Biotracker
+
+[Blog 1](./blog/bio-1.md)
+[Blog 2](./blog/bio-2.md)
+
+---
+
+![](../../images/sidebyside-1.png)
+![](../../images/sidebyside-2.png)
+![](../../images/sidebyside-3.png)
+
+---
 
 <details>
 <summary>Show Images 1–20</summary>
