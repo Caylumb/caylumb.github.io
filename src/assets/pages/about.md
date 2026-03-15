@@ -1,4 +1,4 @@
 CV goes here
 
-<{pdf:projects/gamejams/Jam1:}>
-<{link:projects/gamejams/Jam1|Open PDF in new tab:}>
+<{pdf:files/CV:}>
+<{link:./files/CV|Open PDF in new tab:}>
