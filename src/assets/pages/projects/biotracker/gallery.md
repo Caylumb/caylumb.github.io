@@ -3,12 +3,12 @@
 [Manufacturing Processes](./blog/bio-1.md)
 [Detailing and Summary](./blog/bio-2.md)
 
-
 ---
 
 ![](../../images/sidebyside-1.png)
 ![](../../images/sidebyside-2.png)
 ![](../../images/sidebyside-3.png)
+![](../../images/outgame-4.jpg)
 
 ---
 

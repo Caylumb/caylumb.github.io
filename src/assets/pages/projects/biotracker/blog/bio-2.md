@@ -1,4 +1,4 @@
-# BLOG 3 (Painting, Electronics and Summary)
+# (Painting & Electronics)
 
 ---
 
@@ -8,6 +8,8 @@ Finally was the electronics, initially I wasn't going to incorperate electronics
 and 'modified' with a heated knife to make space for wiring and switches. The result includes a main switch, a trigger, 4 LED panels in the head, and a detachable battery pack all wired together to produce a torch effect at the front activated by pulling the trigger. At the top I intended to add a laser and another light however these did not make it into the final design. Additionally, there is a removable old phone built into the screen portion of the project, which I intend to have display an animated visual of what appears in the game.
 
 ---
+
+# (Summary)
 
 Overall the project turned out rather well, however the main difference I would have made early on was choosing not to scale the whole thing up by 25%, as it turned out much larger than anticipated. The ingame model is deceptively small, so while scaling up the project makes it fit better with real world items like the grip, bolts and switches, it is definitely a bit too large. The aesthetics turned out very well in my opinion, and being able to reproduce something from an ingame model into real life was a very enjoyable experience. Even though there were issues I have learnt a lot and will continue to create things using these lessons.
 

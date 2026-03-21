@@ -12,6 +12,10 @@ The raw import of the game's model is split into 5 parts: Base, Grip, Stock, Cam
 
 ---
 
+![](../../images/unity.jpg)
+
+---
+
 # (Manufacturing and Assembly)
 
 ---
