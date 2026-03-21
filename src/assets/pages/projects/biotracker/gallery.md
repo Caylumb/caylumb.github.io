@@ -1,7 +1,8 @@
 # Biotracker
 
-[Blog 1](./blog/bio-1.md)
-[Blog 2](./blog/bio-2.md)
+[Manufacturing Processes](./blog/bio-1.md)
+[Detailing and Summary](./blog/bio-2.md)
+
 
 ---
 
