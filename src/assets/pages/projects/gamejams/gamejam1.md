@@ -1,4 +1,4 @@
-<{pdf:projects/gamejams/Jam1:}>
-<{link:projects/gamejams/Jam1|Open PDF in new tab:}>
+<{pdf:files/Jam1:}>
+<{link:files/Jam1.pdf|Open PDF in new tab:}>
 
 https://jamielum.itch.io/timetwister
