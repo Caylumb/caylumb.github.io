@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-const pdfModules = import.meta.glob<string>('../../assets/blogPosts/**/*.pdf', {
+const pdfModules = import.meta.glob<string>('../../assets/**/*.pdf', {
   eager: true,
   import: 'default',
   query: '?url',
@@ -12,7 +12,7 @@ interface KindOfAsyncPdfLoaderProps {
 
 export default function KindOfAsyncPdfLoader({ pdfPath }: KindOfAsyncPdfLoaderProps) {
   const pdfUrl = useMemo(() => {
-    const key = `../../assets/blogPosts/${pdfPath}.pdf`;
+    const key = `../../assets/${pdfPath}.pdf`;
     return pdfModules[key] ?? null;
   }, [pdfPath]);
 

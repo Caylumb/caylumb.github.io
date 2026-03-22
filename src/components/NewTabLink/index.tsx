@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-const pdfModules = import.meta.glob<string>('../../assets/blogPosts/**/*.pdf', {
+const pdfModules = import.meta.glob<string>('../../assets/**/*.pdf', {
   eager: true,
   import: 'default',
   query: '?url',
@@ -14,7 +14,7 @@ interface NewTabLinkProps {
 export default function NewTabLink({ href, label }: NewTabLinkProps) {
   const resolvedHref = useMemo(() => {
     // If it looks like an internal PDF path (no protocol, ends with .pdf or matches a known path)
-    const pdfKey = `../../assets/blogPosts/${href}.pdf`;
+    const pdfKey = `../../assets/${href}`;
     if (pdfModules[pdfKey]) {
       return pdfModules[pdfKey];
     }
