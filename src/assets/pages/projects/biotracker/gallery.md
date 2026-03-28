@@ -2,6 +2,7 @@
 
 [Manufacturing Processes](./blog/bio-1.md)
 [Detailing and Summary](./blog/bio-2.md)
+[Complex Components](./blog/bio-3.md)
 
 ---
 
