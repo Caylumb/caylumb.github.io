@@ -10,13 +10,21 @@ The frame is built into the main body of the build, it features a small slot for
 
 The spring mechanism was the most challenging, I used a small pen spring and a .22 casing to create a sliding effect that puts pressure on the internal part of the trigger, keeping it in the off position, and when squeezing with your finger on the trigger the casing is pushed into the frame.
 
-![]()
+![](../../images/trigger.jpg)
+![](../../images/trigger-2.jpg)
+![](../../images/trigger-3.jpg)
 
 ---
 
+Like the in-game scanner, I wanted the stock to be adjustable, both as a manufacturing challenge to myself and incase I actually wanted to change the length later on. To do this I chose to make a pin system similar to a vacuum cleaner, it just so happened that I had a spare vacuum cleaner pipe lying around, so it was cut to length, then drilled into to create holes that would later lock the stock into place. 
 
+The stock was 3d printed, but would still require another mechanism to keep the adjustablility, to do this I created a small pin inside the main body of the stock, held under pressure by another spring and a dome nut to pop into whichever hole it aligned with. To stop the stock sliding off or spinning around, a large channel was implemented into the body and a bolt was fastened onto the top of the shaft. Finally the buttpad of the stock is a chunk of foam cut to shape, giving the user a softer experience
 
+![](../../images/stock-1.jpg)
+![](../../images/stock-2.jpg)
+![](../../images/stock-3.jpg)
 
+---
 
 
 
