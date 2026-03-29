@@ -10,7 +10,7 @@ The frame is built into the main body of the build, it features a small slot for
 
 The spring mechanism was the most challenging, I used a small pen spring and a .22 casing to create a sliding effect that puts pressure on the internal part of the trigger, keeping it in the off position, and when squeezing with your finger on the trigger the casing is pushed into the frame.
 
-![](../../images/trigger.JPG)
+![](../../images/Trigger.JPG)
 ![](../../images/trigger-2.JPG)
 ![](../../images/trigger-3.jpg)
 
@@ -29,4 +29,5 @@ The stock was 3d printed, but would still require another mechanism to keep the 
 The small chain hanging from the camera section on top is not a purchased chain, it is a series of personally made wire links, a small addition, but these were made by cutting and bending small sections of wire around a metal rod, then soldered to form the loop, the chain as a whole is wrapped in a black fabric to cover the majority of the links.
 
 ![](../../images/chain.jpg)
+![](../../images/58.jpg)
 

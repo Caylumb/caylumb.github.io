@@ -1,7 +1,7 @@
 # Biotracker
 
-[Manufacturing Processes](./blog/bio-1.md)
-[Detailing and Summary](./blog/bio-2.md)
+[Manufacturing Processes](./blog/bio-1.md)<br>
+[Detailing and Summary](./blog/bio-2.md)<br>
 [Complex Components](./blog/bio-3.md)
 
 ---
@@ -31,8 +31,8 @@
 | ![](../../../images/45.jpg) | ![](../../../images/46.jpg) | ![](../../../images/47.jpg) | ![](../../../images/48.jpg) |
 | ![](../../../images/49.jpg) | ![](../../../images/50.jpg) | ![](../../../images/51.jpg) | ![](../../../images/52.jpg) |
 | ![](../../../images/53.jpg) | ![](../../../images/54.jpg) | ![](../../../images/55.jpg) | ![](../../../images/56.jpg) |
-| ![](../../../images/57.jpg) | ![](../../../images/58.jpg) |                              |                              |
-
+| ![](../../../images/57.jpg) | ![](../../../images/58.jpg) | ![](../../../images/59.jpg) | ![](../../../images/60.jpg) |
+| ![](../../../images/61.jpg) | ![](../../../images/62.jpg) | ![](../../../images/63.jpg) |   |
 </details>
 
 
