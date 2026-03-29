@@ -10,8 +10,6 @@ function KindOfAsyncImageLoader(props: KindOfAsyncImageLoaderProps) {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [error, setError] = useState<boolean>(false);
 
-  console.log(props);
-
   useEffect(() => {
     const loadImage = async () => {
       try {
