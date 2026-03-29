@@ -38,7 +38,12 @@ const components: Components = {
       typeof node.properties['data-new-tab-link'] === 'string' &&
       typeof node.properties['data-new-tab-label'] === 'string'
     ) {
-      return <NewTabLink href={node.properties['data-new-tab-link']} label={node.properties['data-new-tab-label']} />;
+      return (
+        <NewTabLink
+          href={node.properties['data-new-tab-link']}
+          label={node.properties['data-new-tab-label']}
+        />
+      );
     }
     return <div {...props} />;
   },
@@ -48,7 +53,9 @@ const components: Components = {
     const fileType = fullFileNameSplit?.[1];
 
     if (fileName && fileType) {
-      return <KindOfAsyncImageLoader imageName={fileName} imageType={fileType} altText={alt ?? ''} />;
+      return (
+        <KindOfAsyncImageLoader imageName={fileName} imageType={fileType} altText={alt ?? ''} />
+      );
     } else {
       throw new Error('Image source is not valid');
     }
@@ -97,7 +104,11 @@ function KindOfAsyncMarkdown({ markdownFetcher }: AsyncMarkdownProps) {
   return (
     <Layout>
       <article className="markdown-content">
-        <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw, customMarkdownSyntaxPlugin]} components={components}>
+        <Markdown
+          remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeRaw, customMarkdownSyntaxPlugin]}
+          components={components}
+        >
           {text}
         </Markdown>
       </article>

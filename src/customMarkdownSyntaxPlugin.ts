@@ -17,7 +17,10 @@ export function customMarkdownSyntaxPlugin() {
         let needsSplit = false;
         // Check if any child text node contains the pattern
         for (const child of children) {
-          if (child.type === 'text' && (regex.test(child.value) || pdfRegex.test(child.value) || linkRegex.test(child.value))) {
+          if (
+            child.type === 'text' &&
+            (regex.test(child.value) || pdfRegex.test(child.value) || linkRegex.test(child.value))
+          ) {
             needsSplit = true;
             break;
           }
