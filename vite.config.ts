@@ -25,9 +25,9 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       output: {
-        manualChunks: {
-          three: ['three'],
-          fiber: ['@react-three/fiber', '@react-three/drei'],
+        manualChunks(id) {
+          if (id.includes('node_modules/three/')) return 'three';
+          if (id.includes('@react-three/fiber') || id.includes('@react-three/drei')) return 'fiber';
         },
       },
     },
