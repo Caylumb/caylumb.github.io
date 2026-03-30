@@ -2,7 +2,7 @@
 
 What is the Biotracker? This creation is a passion project and a technical challenge I set myself. I've always been a big fan of games and media, and wanted to actually make something from what I enjoy. The Biotracker is an old grimey handheld scanning device used to pinpoint and locate biological lifeforms, be it through doors and walls, or even in pitch black darkness.
 
-While I would have loved to actually manufacture a functioning version, I'm somewhat lacking in the extremely expensive radar technology department, so I'll have to settle for a prop with some fancy features. Below is a few blogs detailing the process I went through, some side-by-side images of the ingame model and the prop, plus a gallery of some of the manufacturing processes.
+While I would have loved to actually manufacture a functioning version, I'm somewhat lacking in the extremely expensive radar technology department, so I had to settle for a prop with some fancy features. Below are a few blogs detailing the process I went through, some side-by-side images of the ingame model and the prop, plus a gallery of some of the manufacturing processes.
 
 [Manufacturing Processes](./blog/bio-1.md)<br>
 [Detailing and Summary](./blog/bio-2.md)<br>
